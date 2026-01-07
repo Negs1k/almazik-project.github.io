@@ -186,7 +186,7 @@
             await updateUserData(userCredential.user);
 
             setTimeout(() => {
-                window.location.href = '../main.html';
+                window.location.href = '../index.html';
             }, 1000);
             
         } catch (error) {
@@ -238,7 +238,7 @@
         showNotification('Регистрация успешна! Проверьте email для подтверждения.', 'success');
 
         setTimeout(() => {
-            window.location.href = '../main.html';
+            window.location.href = '../index.html';
         }, 2000);
         
     } catch (error) {
@@ -275,7 +275,7 @@
             showNotification('Вход через Google выполнен!', 'success');
 
             setTimeout(() => {
-                window.location.href = '../main.html';
+                window.location.href = '../index.html';
             }, 1000);
             
         } catch (error) {
@@ -421,8 +421,8 @@
     function goBack() {
         const referrer = document.referrer;
         
-        if (referrer && referrer.includes('main.html')) {
-            window.location.href = '../main.html';
+        if (referrer && referrer.includes('index.html')) {
+            window.location.href = '../index.html';
         } else if (window.history.length > 1) {
             window.history.back();
         } else {
